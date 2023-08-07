@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>To Do List</title>
+
+        <link rel="shortcut icon" href="./Images/list.png" type="image/x-icon">
+        <link rel="stylesheet" href="./CSS/styles.css">
+
+        <script src="https://kit.fontawesome.com/dcca2f2ec8.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav id="navbar">
+            <ul>
+                <li>
+                    <a href="/"><i class="fa-solid fa-calendar-days"></i>Today</a>
+                </li>
+
+                <li>
+                    <a href="/work"><i class="fa-solid fa-briefcase"></i>Work</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main>
+            <div class="box" id="heading">
+                <h1><%= listTitle %></h1>
+            </div>
+    
+            <div class="box">
+                <% for (let i=0; i<newListItems.length; i++) { %>
+    
+                    <div class="item">
+                        <input type="checkbox">
+                        <p><%= newListItems[i] %></p>
+                    </div>
+    
+                <% } %>
+    
+                <form class="item" action="/" method="post">
+                    <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+                    <button type="submit" name="list" value=<%= listTitle %>>+</button>
+                </form>
+            </div>
+        </main>
+
+        <footer>
+            <p>Copyright ©️ 2023</p>
+        </footer>
+    </body>
+</html>

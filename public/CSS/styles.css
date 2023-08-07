@@ -1,0 +1,156 @@
+html {
+    background-color: #E4E9FD;
+    background-image: -webkit-linear-gradient(66deg, #A683E3 50%, #E4E9FD 50%);
+    min-height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-self: stretch;
+    min-height: 95vh;
+}
+
+/* Navigation Bar */
+#navbar {
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+#navbar ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+#navbar ul li a i {
+    margin-right: 10px;
+}
+
+#navbar li {
+    list-style-type: none;
+    float: left;
+}
+
+#navbar ul li a {
+    color: A683E3;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    padding: 20px;
+    position: relative;
+}
+
+#navbar li:first-child {
+    margin-left: 20px;
+}
+
+#navbar a:not(:only-child):after {
+    content: "\f105";
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 14px;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 0.5s;
+}
+
+/* Main Container */
+main {
+    flex: 1 0 auto;
+}
+
+h1 {
+    color: #FFF;
+    padding: 10px;
+}
+
+.box {
+    max-width: 400px;
+    margin: 50px auto;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+    background-color: #A683E3;
+    text-align: center;
+}
+
+.item {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+    border-bottom: 0;
+}
+
+input:checked+p {
+    text-decoration: line-through;
+    text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+    margin: 20px;
+}
+
+p {
+    margin: 0px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #00204A;
+}
+
+form.item {
+    text-align: center;
+    margin-left: 15px;
+}
+
+button {
+    min-height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-color: transparent;
+    background-color: #A683E3;
+    color: #FFF;
+    font-size: 30px;
+    border-width: 0px;
+}
+
+input[type="text"] {
+    text-align: center;
+    height: 60px;
+    top: 10px;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    font-weight: 200;
+    width: 313px;
+    margin-right: 3px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+    color: #808080;
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    flex: 0 0 auto;
+    color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
