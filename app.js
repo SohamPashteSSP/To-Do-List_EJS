@@ -1,3 +1,6 @@
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import bodyParser from "body-parser";
 import mongoose from "mongoose";
@@ -10,7 +13,10 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 const port = 3000;
-mongoose.connect("mongodb://0.0.0.0:27017/toDoListEJSDB");
+
+mongoose.connect(process.env.MONGO_DB);
+// // Local database
+// mongoose.connect("mongodb://0.0.0.0:27017/toDoListEJSDB");
 
 // Schema and model for Home Page
 const itemsSchema = new mongoose.Schema({
